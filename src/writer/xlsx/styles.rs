@@ -1,11 +1,13 @@
-use super::driver::*;
-use super::XlsxError;
-use helper::const_str::*;
+use std::io;
+
 use quick_xml::events::{BytesDecl, Event};
 use quick_xml::Writer;
-use std::io;
-use structs::Stylesheet;
-use structs::WriterManager;
+
+use super::driver::*;
+use super::XlsxError;
+use crate::helper::const_str::*;
+use crate::structs::Stylesheet;
+use crate::structs::WriterManager;
 
 pub(crate) fn write<W: io::Seek + io::Write>(
     stylesheet: &Stylesheet,

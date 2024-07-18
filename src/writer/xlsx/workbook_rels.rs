@@ -1,12 +1,13 @@
+use std::io;
+
 use quick_xml::events::{BytesDecl, Event};
 use quick_xml::Writer;
-use std::io;
 
 use super::driver::*;
 use super::XlsxError;
-use helper::const_str::*;
-use structs::Spreadsheet;
-use structs::WriterManager;
+use crate::helper::const_str::*;
+use crate::structs::Spreadsheet;
+use crate::structs::WriterManager;
 
 pub(crate) fn write<W: io::Seek + io::Write>(
     spreadsheet: &Spreadsheet,

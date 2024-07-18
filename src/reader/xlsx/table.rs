@@ -1,12 +1,14 @@
-use super::driver::*;
-use super::XlsxError;
+use std::result;
+
 use quick_xml::events::Event;
 use quick_xml::Reader;
-use std::result;
-use structs::raw::RawFile;
-use structs::Comment;
-use structs::Worksheet;
-use structs::{Table, TableColumn, TableStyleInfo};
+
+use super::driver::*;
+use super::XlsxError;
+use crate::structs::raw::RawFile;
+use crate::structs::Comment;
+use crate::structs::Worksheet;
+use crate::structs::{Table, TableColumn, TableStyleInfo};
 
 pub(crate) fn read(
     worksheet: &mut Worksheet,

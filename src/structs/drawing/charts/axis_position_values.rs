@@ -1,5 +1,7 @@
-use super::super::super::EnumTrait;
 use std::str::FromStr;
+
+use crate::EnumTrait;
+
 #[derive(Clone, Debug)]
 pub enum AxisPositionValues {
     Bottom,

@@ -1,13 +1,13 @@
+use std::fmt::Write;
 use std::fs;
 use std::io;
 use std::path::Path;
 use std::string::FromUtf8Error;
 
-use std::fmt::Write;
-use structs::CsvEncodeValues;
-use structs::CsvWriterOption;
-use structs::Spreadsheet;
-use structs::XlsxError;
+use crate::structs::CsvEncodeValues;
+use crate::structs::CsvWriterOption;
+use crate::structs::Spreadsheet;
+use crate::structs::XlsxError;
 
 /// write spreadsheet file to arbitrary writer.
 /// # Arguments

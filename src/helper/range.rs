@@ -1,6 +1,5 @@
-use helper::coordinate::*;
-
 use super::coordinate;
+use crate::helper::coordinate::*;
 
 /// `(col, row)`
 pub type BasicCellIndex = (u32, u32);

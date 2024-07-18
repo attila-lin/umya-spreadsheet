@@ -1,4 +1,10 @@
-// styleSheet
+//! styleSheet
+use std::io::Cursor;
+
+use quick_xml::events::{BytesStart, Event};
+use quick_xml::Reader;
+use quick_xml::Writer;
+
 use super::BordersCrate;
 use super::CellFormat;
 use super::CellFormats;
@@ -11,13 +17,9 @@ use super::Fonts;
 use super::NumberingFormats;
 use super::Protection;
 use super::Style;
-use helper::const_str::*;
-use quick_xml::events::{BytesStart, Event};
-use quick_xml::Reader;
-use quick_xml::Writer;
-use reader::driver::*;
-use std::io::Cursor;
-use writer::driver::*;
+use crate::helper::const_str::*;
+use crate::reader::driver::*;
+use crate::writer::driver::*;
 
 #[derive(Clone, Default, Debug)]
 pub(crate) struct Stylesheet {

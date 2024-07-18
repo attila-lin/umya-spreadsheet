@@ -1,12 +1,14 @@
-// c:axPos
-use super::super::super::EnumValue;
-use super::AxisPositionValues;
+//! c:axPos
+use std::io::Cursor;
+
 use quick_xml::events::BytesStart;
 use quick_xml::Reader;
 use quick_xml::Writer;
-use reader::driver::*;
-use std::io::Cursor;
-use writer::driver::*;
+
+use super::AxisPositionValues;
+use crate::reader::driver::*;
+use crate::writer::driver::*;
+use crate::EnumValue;
 
 #[derive(Clone, Default, Debug)]
 pub struct AxisPosition {

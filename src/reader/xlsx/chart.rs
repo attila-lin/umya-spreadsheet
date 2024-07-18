@@ -1,10 +1,12 @@
-use super::XlsxError;
-use crate::xml_read_loop;
+use std::result;
+
 use quick_xml::events::Event;
 use quick_xml::Reader;
-use std::result;
-use structs::drawing::charts::ChartSpace;
-use structs::raw::RawFile;
+
+use super::XlsxError;
+use crate::structs::drawing::charts::ChartSpace;
+use crate::structs::raw::RawFile;
+use crate::xml_read_loop;
 
 pub(crate) fn read(
     raw_file: &RawFile,

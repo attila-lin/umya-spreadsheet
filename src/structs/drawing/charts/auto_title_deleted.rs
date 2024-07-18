@@ -1,11 +1,13 @@
-// c:autoTitleDeleted
-use super::super::super::BooleanValue;
+//! c:autoTitleDeleted
+use std::io::Cursor;
+
 use quick_xml::events::BytesStart;
 use quick_xml::Reader;
 use quick_xml::Writer;
-use reader::driver::*;
-use std::io::Cursor;
-use writer::driver::*;
+
+use crate::reader::driver::*;
+use crate::writer::driver::*;
+use crate::BooleanValue;
 
 #[derive(Clone, Default, Debug)]
 pub struct AutoTitleDeleted {

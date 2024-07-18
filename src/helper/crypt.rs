@@ -1,4 +1,8 @@
-use super::const_str::*;
+use std::cmp::Ordering;
+use std::io;
+use std::io::Write;
+use std::path::Path;
+
 use aes::cipher::{block_padding::NoPadding, BlockEncryptMut, KeyIvInit};
 use base64::{engine::general_purpose::STANDARD, Engine as _};
 use byteorder::{ByteOrder, LittleEndian};
@@ -7,13 +11,11 @@ use hmac::{Hmac, Mac};
 use quick_xml::events::{BytesDecl, Event};
 use quick_xml::Writer;
 use sha2::{Digest, Sha512};
-use std::cmp::Ordering;
-use std::io;
-use std::io::Write;
-use std::path::Path;
-use structs::SheetProtection;
-use structs::WorkbookProtection;
-use writer::driver::*;
+
+use super::const_str::*;
+use crate::structs::SheetProtection;
+use crate::structs::WorkbookProtection;
+use crate::writer::driver::*;
 
 type Aes256CbcEnc = cbc::Encryptor<aes::Aes256>;
 

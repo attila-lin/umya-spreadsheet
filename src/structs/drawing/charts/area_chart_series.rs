@@ -1,4 +1,10 @@
-// c:ser
+//! c:ser
+use std::io::Cursor;
+
+use quick_xml::events::{BytesStart, Event};
+use quick_xml::Reader;
+use quick_xml::Writer;
+
 use super::Bubble3D;
 use super::BubbleSize;
 use super::CategoryAxisData;
@@ -15,13 +21,9 @@ use super::Smooth;
 use super::Values;
 use super::XValues;
 use super::YValues;
+use crate::structs::Spreadsheet;
+use crate::writer::driver::*;
 use crate::xml_read_loop;
-use quick_xml::events::{BytesStart, Event};
-use quick_xml::Reader;
-use quick_xml::Writer;
-use std::io::Cursor;
-use structs::Spreadsheet;
-use writer::driver::*;
 
 #[derive(Clone, Default, Debug)]
 pub struct AreaChartSeries {

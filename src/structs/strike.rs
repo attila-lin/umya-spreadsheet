@@ -1,11 +1,13 @@
-// strike
-use super::BooleanValue;
+//! strike
+use std::io::Cursor;
+
 use quick_xml::events::BytesStart;
 use quick_xml::Reader;
 use quick_xml::Writer;
-use reader::driver::*;
-use std::io::Cursor;
-use writer::driver::*;
+
+use super::BooleanValue;
+use crate::reader::driver::*;
+use crate::writer::driver::*;
 
 #[derive(Clone, Default, Debug, Eq, Ord, PartialEq, PartialOrd)]
 pub struct Strike {

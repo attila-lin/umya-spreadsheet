@@ -3,10 +3,11 @@ use std::borrow::Cow;
 use fancy_regex::Captures;
 use fancy_regex::Matches;
 use fancy_regex::Regex;
-use helper::date::*;
-use structs::Color;
-use structs::NumberingFormat;
 use thousands::Separable;
+
+use crate::helper::date::*;
+use crate::structs::Color;
+use crate::structs::NumberingFormat;
 
 pub struct Split<'r, 't> {
     finder: Matches<'r, 't>,
